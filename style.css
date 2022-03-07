@@ -1,0 +1,39 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+html {
+	background-image: url('background.webp');
+	background-size: 100%;
+	background-attachment: fixed;
+  color: white;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+}
+
+#userChoice {
+  height: 500px;
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+}
+
+#workout {
+  height: 500px;
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+}

@@ -21,3 +21,5 @@ Web Speech API - lämpliga pauser
 - bild
 
 FÄRDIGA TRÄNINGSPROGRAM
+
+övning lyser upp när en är på den
