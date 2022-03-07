@@ -1,14 +1,23 @@
-# BudgetApp
+# TrainingApp
 
-Budget: En applikation som låter användaren mata in utgifter och ange belopp, datum och kategori på dem. Användaren kan se en sammanfattning av exempelvis totala utgifter per månad, per kategori, etc.
+Träning: En applikation som låter användaren sätta ihop ett personligt träningsprogram utifrån en fördefinierad uppsättning övningar (armhävningar, sit-ups, etc.). Användaren kan se en sammanfattning av exempelvis hur lång tid träningsprogrammet tar att utföra eller hur många kalorier det bränner.
 
-VG-funktionalitet: Rita upp ett enkelt diagram med SVG eller Canvas som visar användarens utgifter per månad.
-
-- startdata 2 månader (belopp, datum, kategori)
-- 3 relevanta gui tester
-- responsivitet
-- spara data i localStorage
+VG-funktionalitet: Läs upp övningarna i träningsprogrammet med Web Speech API (så att användaren inte behöver titta på skärmen) och sätt lämpliga pauser i uppläsningen utifrån antalet repetitioner och hur lång tid en repetition uppskattas ta.
 
 
+- json med övningarna
+- funktion för att lägga till övning i listan
+- och ta bort övning i listan
+- sammanfatting av tid
+- hur intensiv blir träningen
 
-ska använda vue, får använda typeScript
+localStorage
+Web Speech API - lämpliga pauser
+
+ÖVNING
+- namn på övning
+- beskrivning
+- intensivitet
+- bild
+
+FÄRDIGA TRÄNINGSPROGRAM
