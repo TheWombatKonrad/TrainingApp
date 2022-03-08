@@ -3,16 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="styles.css">
   <title>TrainingApp</title>
 </head>
 <body>
+
+<div id="vue-app">
+
 
   <header>
     <h1>TrainingApp</h1>
 
     <section id="control-bar">
+
       <input type="radio" name="active" id="start">
       <label for="start">Start</label>
 
@@ -22,7 +27,7 @@
       <input type="radio" name="active" id="stop">
       <label for="stop">Stop</label>
 
-      <button type="button" name="clear">Clear</button>
+      <button @click="count++">Count is: {{ count }}</button>
     </section>
 
     <section id="overall-time"></section>
@@ -42,6 +47,8 @@
   <footer>
     <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
   </footer>
+
+  </div>
 
 </body>
 </html>
