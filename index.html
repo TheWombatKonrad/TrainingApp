@@ -18,30 +18,38 @@
 
     <section id="control-bar">
 
-      <input type="radio" name="active" id="start">
+      <input type="radio" name="state" id="start" >
       <label for="start">Start</label>
 
-      <input type="radio" name="active" id="paus">
+      <input type="radio" name="state" id="paus" >
       <label for="paus">Paus</label>
 
-      <input type="radio" name="active" id="stop">
+      <input type="radio" name="state" id="stop">
       <label for="stop">Stop</label>
 
-      <button @click="count++">Count is: {{ count }}</button>
-    </section>
+      <button>Clear</button>
 
-    <section id="overall-time"></section>
+      <section id="overall-time">Start your workout!</section>
+
+    </section>
 
   </header>
 
 <div id="container">
   <section id="userChoice">
-    <section id="exercises"></section>
+    <h2>Pick some exercises...</h2>
+    <ul id="exercises"></ul>
 
-    <section id="programs"></section>
+    <h2>... or a ready-made program!</h2>
+    <ul id="programs"></ul>
   </section>
 
-  <section id="workout"></section>
+  <section id="workout">
+    <h2>Your workout</h2>
+
+    <ul></ul>
+
+  </section>
   </div>
 
   <footer>
