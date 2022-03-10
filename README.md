@@ -16,9 +16,9 @@ Web Speech API - lämpliga pauser
 
 ÖVNING
 - namn på övning
-- beskrivning
-- intensivitet
-- bild
+- beskrivning??
+- svårighetsnivå
+- bild??
 
 FÄRDIGA TRÄNINGSPROGRAM
 

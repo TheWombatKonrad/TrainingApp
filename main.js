@@ -1,7 +1,9 @@
 Vue.createApp({
   data() {
     return {
-      count: 0
+      exercises: [],
+      programs: [],
+      userProgram: [],
     }
 },
 
