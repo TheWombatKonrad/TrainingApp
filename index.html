@@ -38,7 +38,12 @@
 <div id="container">
   <section id="userChoice">
     <h2>Pick some exercises...</h2>
-    <ul id="exercises"></ul>
+    <ul id="exercises">
+      <li v-for="exercise in exercises">
+        <h3>{{exercise.category}}: {{ exercise.name }}</h3>
+        <button type="button" @click="addToUserProgram(exercise)">Add</button>
+      </li>
+    </ul>
 
     <h2>... or a ready-made program!</h2>
     <ul id="programs"></ul>
@@ -46,8 +51,13 @@
 
   <section id="workout">
     <h2>Your workout</h2>
+    <ul>
+      <li v-for="exercise in userProgram">
+        <h3>{{ exercise.name }}</h3>
 
-    <ul></ul>
+        <button type="button" @click="removeExercise(exercise)">Remove</button>
+      </li>
+    </ul>
 
   </section>
   </div>

@@ -24,4 +24,4 @@ FÄRDIGA TRÄNINGSPROGRAM
 
 övning lyser upp när en är på den
 
-onmounted
+remove removeButton when started
