@@ -24,4 +24,12 @@ FÄRDIGA TRÄNINGSPROGRAM
 
 övning lyser upp när en är på den
 
+vf 29 s? :(
+
 remove removeButton when started
+
+Hur går det för er med inlämningsuppgift 4?
+
+Vad är de största utmaningarna som ni har kvar att lösa?
+
+Behöver ni hjälp med något?

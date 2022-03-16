@@ -18,18 +18,15 @@
 
     <section id="control-bar">
 
-      <input type="radio" name="state" id="start" >
-      <label for="start">Start</label>
+      <button type="button" name="state" id="start" @click="startWorkout()">Start</button>
 
-      <input type="radio" name="state" id="paus" >
-      <label for="paus">Paus</label>
+      <button type="button" name="state" id="paus" @click="pausWorkout()">Paus</button>
 
-      <input type="radio" name="state" id="stop">
-      <label for="stop">Stop</label>
+      <button type="button" name="state" id="stop" @click="stopWorkout()">Stop</button>
 
-      <button>Clear</button>
+      <button type="button" @click="clearProgram(userProgram)">Clear</button>
 
-      <section id="overall-time">Start your workout!</section>
+      <section id="overall-time">Total Workout Time: {{programTimerCount}}</section>
 
     </section>
 
@@ -52,10 +49,13 @@
   <section id="workout">
     <h2>Your workout</h2>
     <ul>
-      <li v-for="exercise in userProgram">
+      <li v-for="exercise in userProgram" class="active">
         <h3>{{ exercise.name }}</h3>
 
-        <button type="button" @click="removeExercise(exercise)">Remove</button>
+        <button type="button" @click="removeExercise(exercise)" class="removeButton">
+          Remove
+        </button>
+        <span class="exerciseTimer" hidden>{{exerciseTimerCount}}s</span>
       </li>
     </ul>
 
