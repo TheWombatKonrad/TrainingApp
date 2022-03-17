@@ -34,6 +34,8 @@ watch: {
 
   methods: {
     addToUserProgram(exercise){
+      exercise.isActive = false;
+      exercise.isInActive = true;
       this.userProgram.push(exercise);
     },
 
@@ -55,6 +57,8 @@ watch: {
         item.querySelector(".removeButton").hidden = true;
         item.querySelector(".exerciseTimer").hidden = false;
       }
+
+      this.cycleWorkouts();
     },
 
     pausWorkout(){
@@ -63,13 +67,25 @@ watch: {
 
     stopWorkout(){
       this.timersEnabled = false
-      this.programTimerCount = 30 
+      this.programTimerCount = 30
 
       let workout = document.querySelectorAll("#workout ul li");
 
       for(item of workout){
         item.querySelector(".removeButton").hidden = false;
         item.querySelector(".exerciseTimer").hidden = true;
+      }
+    },
+
+    cycleWorkouts(){
+      for(item of userProgram){
+        item.IsActive = true;
+        item.IsInActive = false;
+
+        setTimeout(5000);
+
+        item.IsActive = false;
+        item.IsInactive = true;
       }
     }
   },
