@@ -22,17 +22,12 @@ Web Speech API - lämpliga pauser
 
 FÄRDIGA TRÄNINGSPROGRAM
 
-övning lyser upp när en är på den
+
+
+
+PROBLEMS
+v-bind fungerar ej med object properties, måste defineras i data()
+
+timeout fungerar inte
 
 vf 29 s? :(
-
-remove removeButton when started
-
-Hur går det för er med inlämningsuppgift 4?
-Det går bra.
-
-Vad är de största utmaningarna som ni har kvar att lösa?
-Vi vet inte riktigt.
-
-Behöver ni hjälp med något?
-Ja, men det blir svårt att förklara i skriftlig form...

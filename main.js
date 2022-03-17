@@ -4,7 +4,7 @@ Vue.createApp({
       exercises: [],
       programs: [],
       userProgram: [],
-      programTimerCount: 30,
+      programTimerCount: '',
       exerciseTimerCount: 45,
       timersEnabled: false
     }
@@ -34,8 +34,6 @@ watch: {
 
   methods: {
     addToUserProgram(exercise){
-      exercise.isActive = false;
-      exercise.isInActive = true;
       this.userProgram.push(exercise);
     },
 
@@ -44,11 +42,12 @@ watch: {
       this.userProgram.splice(index, 1);
     },
 
-    clearProgram(userProgram){
+    clearProgram(){
       this.userProgram = [];
     },
 
     startWorkout(){
+      this.programTimerCount = this.userProgram.length * (45 + 15) - 15;
       this.timersEnabled = true
 
       let workout = document.querySelectorAll("#workout ul li");
@@ -78,14 +77,13 @@ watch: {
     },
 
     cycleWorkouts(){
-      for(item of userProgram){
-        item.IsActive = true;
-        item.IsInActive = false;
+      let workout = document.querySelectorAll("#workout ul li");
 
-        setTimeout(5000);
+      for(item of workout){
+        item.classList.add("active");
 
-        item.IsActive = false;
-        item.IsInactive = true;
+        setTimeout(function () { item.classList.remove("active"); }, 5000);
+
       }
     }
   },
