@@ -63,7 +63,7 @@ watch: {
 
     stopWorkout(){
       this.timersEnabled = false
-      this.programTimerCount = 30
+      this.programTimerCount = 30 
 
       let workout = document.querySelectorAll("#workout ul li");
 

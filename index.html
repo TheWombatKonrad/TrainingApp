@@ -38,6 +38,8 @@
     <ul id="exercises">
       <li v-for="exercise in exercises">
         <h3>{{ exercise.name }}</h3>
+        <p>{{ exercise.description }}</p>
+        <p>{{ exercise.level }}</p>
         <button type="button" @click="addToUserProgram(exercise)">Add</button>
       </li>
     </ul>
@@ -48,10 +50,10 @@
 
   <section id="workout">
     <h2>Your workout</h2>
-    <ul>
+    <ul id="exercise-active">
       <li v-for="exercise in userProgram" class="active">
         <h3>{{ exercise.name }}</h3>
-
+        
         <button type="button" @click="removeExercise(exercise)" class="removeButton">
           Remove
         </button>
