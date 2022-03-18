@@ -24,7 +24,7 @@
 
       <button type="button" name="state" id="stop" @click="stopWorkout()">Stop</button>
 
-      <button type="button" @click="clearProgram(userProgram)">Clear</button>
+      <button type="button" @click="clearProgram()">Clear</button>
 
       <section id="overall-time">Total Workout Time: {{programTimerCount}}</section>
 
@@ -38,7 +38,7 @@
     <ul id="exercises">
       <li v-for="exercise in exercises">
         <h3>{{ exercise.name }}</h3>
-        <p>{{ exercise.description }}</p>
+        <p>{{ exercise.target }}</p>
         <p>{{ exercise.level }}</p>
         <button type="button" @click="addToUserProgram(exercise)">Add</button>
       </li>
@@ -50,10 +50,11 @@
 
   <section id="workout">
     <h2>Your workout</h2>
-    <ul id="exercise-active">
-      <li v-for="exercise in userProgram" class="active">
+    <ul>
+      <li v-for="exercise in userProgram">
+
         <h3>{{ exercise.name }}</h3>
-        
+
         <button type="button" @click="removeExercise(exercise)" class="removeButton">
           Remove
         </button>

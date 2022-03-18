@@ -4,7 +4,7 @@ Vue.createApp({
       exercises: [],
       programs: [],
       userProgram: [],
-      programTimerCount: 30,
+      programTimerCount: '',
       exerciseTimerCount: 45,
       timersEnabled: false
     }
@@ -42,11 +42,12 @@ watch: {
       this.userProgram.splice(index, 1);
     },
 
-    clearProgram(userProgram){
+    clearProgram(){
       this.userProgram = [];
     },
 
     startWorkout(){
+      this.programTimerCount = this.userProgram.length * (45 + 15) - 15;
       this.timersEnabled = true
 
       let workout = document.querySelectorAll("#workout ul li");
@@ -55,6 +56,8 @@ watch: {
         item.querySelector(".removeButton").hidden = true;
         item.querySelector(".exerciseTimer").hidden = false;
       }
+
+      this.cycleWorkouts();
     },
 
     pausWorkout(){
@@ -63,13 +66,24 @@ watch: {
 
     stopWorkout(){
       this.timersEnabled = false
-      this.programTimerCount = 30 
+      this.programTimerCount = 30
 
       let workout = document.querySelectorAll("#workout ul li");
 
       for(item of workout){
         item.querySelector(".removeButton").hidden = false;
         item.querySelector(".exerciseTimer").hidden = true;
+      }
+    },
+
+    cycleWorkouts(){
+      let workout = document.querySelectorAll("#workout ul li");
+
+      for(item of workout){
+        item.classList.add("active");
+
+        setTimeout(function () { item.classList.remove("active"); }, 5000);
+
       }
     }
   },
