@@ -37,8 +37,10 @@
     <h2>Pick some exercises...</h2>
     <ul id="exercises">
       <li v-for="exercise in exercises">
-        <h3>{{ exercise.name }}</h3>
-        <p>{{ exercise.target }}</p>
+        <div class="descriptiontext"> 
+        <h3>{{ exercise.name }} </h3>
+        <p>{{ exercise.description }}</p>
+       </div>
         <p>{{ exercise.level }}</p>
         <button type="button" @click="addToUserProgram(exercise)">Add</button>
       </li>
