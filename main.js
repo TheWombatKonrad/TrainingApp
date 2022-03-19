@@ -16,6 +16,12 @@ Vue.createApp({
   methods: {
     //adds the exercise to the userWorkout-array
     addToUserWorkout(exercise) {
+      if(this.userWorkout.length > 0){
+        let break = new exercises();
+        break.name = 'Break';
+
+      }
+
       this.userWorkout.push(exercise);
     },
 
@@ -30,13 +36,7 @@ Vue.createApp({
       this.userWorkout = [];
     },
 
-    startWorkout() {
-      //calculates the main timer and starts it
-      let currentTime = new Date().getTime();
-      let workoutSeconds = this.userWorkout.length * (45 + 15) - 15;
-      this.workoutStopTime = currentTime + workoutSeconds * 1000;
-      this.timersEnabled = true
-
+    async startWorkout() {
       //removes the removeButton from the userProgram list items, and shows
       let workout = document.querySelectorAll("#workout ul li");
 
@@ -44,26 +44,6 @@ Vue.createApp({
         item.querySelector(".removeButton").hidden = true;
       }
 
-      this.cycleWorkouts(workout);
-    },
-
-    pausWorkout() {
-      this.timersEnabled = false
-    },
-
-    stopWorkout() {
-      this.timersEnabled = false
-      this.workoutTimeLeft = 30
-
-      let workout = document.querySelectorAll("#workout ul li");
-
-      for (item of workout) {
-        item.querySelector(".removeButton").hidden = false;
-        item.querySelector(".exerciseTimer").hidden = true;
-      }
-    },
-
-    async cycleWorkouts(workout) {
       for (item of workout) {
         item.classList.add("active");
         item.querySelector(".exerciseTimer").hidden = false;
@@ -79,14 +59,30 @@ Vue.createApp({
             (this.workoutStopTime - new Date().getTime()) / 1000);
 
           await new Promise(resolve => setTimeout(resolve, 1000));
-        }
+        }//while
+      }//for
 
         item.classList.remove("active");
         item.querySelector(".exerciseTimer").hidden = true;
 
         await new Promise(resolve => setTimeout(resolve, 15000));
-      }//for
-    }//method
+    },
+
+    pauseWorkout() {
+      this.timersEnabled = false
+    },
+
+    stopWorkout() {
+      this.timersEnabled = false
+      this.workoutTimeLeft = 30
+
+      let workout = document.querySelectorAll("#workout ul li");
+
+      for (item of workout) {
+        item.querySelector(".removeButton").hidden = false;
+        item.querySelector(".exerciseTimer").hidden = true;
+      }
+    }
   },
 
 
