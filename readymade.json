@@ -1,24 +1,32 @@
 [
     {
         "name": "Beginners Full Body Workout:",
-        "content": ["1, Barbell back squats", "Pull-ups/chin-ups",
-          "Overhead Press, seated or standing, dumbbell or barbell",
-          "Dumbbell single arm row", "Bench press dumbbell or barbell"]
+        "content": [
+            "1, Barbell back squats",
+            "Pull-ups/chin-ups",
+            "Overhead Press, seated or standing, dumbbell or barbell",
+            "Dumbbell single arm row",
+            "Bench press dumbbell or barbell"
+        ]
     },
     {
-        "info": "medium fullbody Workout :",
-        "info1": "Dumbbell squats",
-        "info2": "Mountain climbers",
-        "info3": "Dumbbell chest press on bench",
-        "info4": "Back raises",
-        "info5": "Plank"
+        "name": "medium fullbody Workout :",
+        "content": [
+            "Dumbbell squats",
+            "Mountain climbers",
+            "Dumbbell chest press on bench",
+            "Back raises",
+            "Plank"
+        ]
     },
     {
-        "info": "Hard fullbody workout",
-        "info1": "Single-leg squat",
-        "info2": "Box incline pushup",
-        "info3": "Basic crunches",
-        "info4": "Plank",
-        "info5": "Squat thrusts (aka “burpees”)"
+        "name": "Hard fullbody workout",
+        "content": [
+            "Single-leg squat",
+            "Box incline pushup",
+            "Basic crunches",
+            "Plank",
+            "Squat thrusts (aka “burpees”)"
+        ]
     }
 ]
