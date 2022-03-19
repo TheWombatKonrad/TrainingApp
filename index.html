@@ -37,11 +37,11 @@
     <h2>Pick some exercises...</h2>
     <ul id="exercises">
       <li v-for="exercise in exercises">
-        <div class="descriptiontext"> 
+        <div>
         <h3>{{ exercise.name }} </h3>
         <p>{{ exercise.description }}</p>
-       </div>
         <p>{{ exercise.level }}</p>
+      </div>
         <button type="button" @click="addToUserWorkout(exercise)">Add</button>
       </li>
     </ul>
@@ -49,13 +49,13 @@
     <h2>... or a ready-made program!</h2>
     <ul id="programs"></ul>
     <li>{{ readymade.info }}</li>-------tror det är här den skall ligga------------------------
-    
+
   </section>
-  
+
 
   <section id="workout">
     <h2>Your workout</h2>
-    
+
     <ul>
       <li v-for="exercise in userWorkout">
 
