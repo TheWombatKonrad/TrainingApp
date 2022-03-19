@@ -9,7 +9,7 @@ html {
 	background-image: url('background.webp');
 	background-size: 100%;
 	background-attachment: fixed;
-  color: white;
+	color: white;
 	font-family: 'Raleway', sans-serif;
 	margin: 5px 10px 0 10px;
 }
@@ -20,13 +20,13 @@ ul {
 
 /*HEADER*/
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
-	'header control';
+		'header control';
 
 	box-sizing: border-box;
-  width: 100%;
+	width: 100%;
 	padding: 20px 0;
 	background: rgb(47, 10, 84, 0.7);
 	color: black;
@@ -79,8 +79,8 @@ h1 {
 
 #container {
 	box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 
 	background: rgb(0, 0, 0, 0.7);
 }
@@ -90,9 +90,9 @@ h1 {
 	height: 100%;
   width: 100%;
 	padding: 5px;
-  border: 5px solid white;
-  overflow: hidden;
-  overflow-y: scroll;
+	border: 5px solid white;
+	overflow: hidden;
+	overflow-y: scroll;
 }
 
 #userChoice li {
@@ -123,7 +123,7 @@ h1 {
   height: 100%;
   width: 100%;
 	padding: 5px;
-  border: 5px solid white;
+	border: 5px solid white;
 	border-left: 0px;
 }
 
