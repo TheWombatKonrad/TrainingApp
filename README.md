@@ -28,6 +28,5 @@ FÄRDIGA TRÄNINGSPROGRAM
 PROBLEMS
 v-bind fungerar ej med object properties, måste defineras i data()
 
-timeout fungerar inte
-
-vf 29 s? :(
+kan en ha watch om vi ska ha två timers, watch uppdateras inte medan metoder körs
+måste lägga in raster i workoutlistan, kan inte bara vänta för då pausas stora timern också
