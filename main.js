@@ -1,6 +1,7 @@
 Vue.createApp({
   data() {
     return {
+      readymade: [],
       exercises: [],
       programs: [],
       userWorkout: [],
@@ -8,6 +9,7 @@ Vue.createApp({
       workoutTimeLeft: '',
       exerciseTimeLeft: 45,
       timersEnabled: false
+
     }
   },
 
