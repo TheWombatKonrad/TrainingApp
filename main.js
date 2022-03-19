@@ -1,7 +1,7 @@
 Vue.createApp({
   data() {
     return {
-      readymade: [],
+      readymades: [],
       exercises: [],
       programs: [],
       userWorkout: [],
@@ -16,11 +16,6 @@ Vue.createApp({
   methods: {
     //adds the exercise to the userWorkout-array
     addToUserWorkout(exercise) {
-      if(this.userWorkout.length > 0){
-        let break = new exercises();
-        break.name = 'Break';
-
-      }
 
       this.userWorkout.push(exercise);
     },
@@ -91,5 +86,9 @@ Vue.createApp({
     let response = await fetch('exercises.json');
     let json = await response.json();
     this.exercises = json;
+
+    response = await fetch('readymade.json');
+    json = await response.json();
+    this.readymades = json;
   }
 }).mount("body");

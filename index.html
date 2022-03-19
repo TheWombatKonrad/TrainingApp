@@ -42,14 +42,27 @@
             <div class="descriptiontext">
               <h3>{{ exercise.name }} </h3>
               <p>{{ exercise.description }}</p>
+              <p>{{ exercise.level }}</p>
             </div>
-            <p>{{ exercise.level }}</p>
             <button type="button" @click="addToUserWorkout(exercise)">Add</button>
           </li>
         </ul>
 
         <h2>... or a ready-made program!</h2>
-        <ul id="programs"> blablabla{{ readymade.info }}</ul>
+        <ul id="programs">
+          <li v-for="workout in readymades">
+            <div class="descriptiontext">
+            <h3>{{workout.workoutName}}</h3>
+            <ul class="readymade-exercises">
+              <li v-for="exercise in workout.content">
+                {{exercise.exercise}}
+              </li>
+            </ul>
+          </div>
+          <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+
+          </li>
+        </ul>
 
 
       </section>
