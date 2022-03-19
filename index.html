@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,74 +9,76 @@
   <link rel="stylesheet" href="styles.css">
   <title>TrainingApp</title>
 </head>
+
 <body>
 
-<div id="vue-app">
+  <div id="vue-app">
 
 
-  <header>
-    <h1>TrainingApp</h1>
+    <header>
+      <h1>TrainingApp</h1>
 
-    <section id="control-bar">
+      <section id="control-bar">
 
-      <button type="button" name="state" id="start" @click="startWorkout()">Start</button>
+        <button type="button" name="state" id="start" @click="startWorkout()">Start</button>
 
-      <button type="button" name="state" id="paus" @click="pausWorkout()">Paus</button>
+        <button type="button" name="state" id="paus" @click="pausWorkout()">Paus</button>
 
-      <button type="button" name="state" id="stop" @click="stopWorkout()">Stop</button>
+        <button type="button" name="state" id="stop" @click="stopWorkout()">Stop</button>
 
-      <button type="button" @click="clearProgram()">Clear</button>
+        <button type="button" @click="clearProgram()">Clear</button>
 
-      <section id="overall-time">Total Workout Time: {{workoutTimeLeft}}</section>
+        <section id="overall-time">Total Workout Time: {{workoutTimeLeft}}</section>
 
-    </section>
+      </section>
 
-  </header>
+    </header>
 
-<div id="container">
-  <section id="userChoice">
-    <h2>Pick some exercises...</h2>
-    <ul id="exercises">
-      <li v-for="exercise in exercises">
-        <div class="descriptiontext"> 
-        <h3>{{ exercise.name }} </h3>
-        <p>{{ exercise.description }}</p>
-       </div>
-        <p>{{ exercise.level }}</p>
-        <button type="button" @click="addToUserWorkout(exercise)">Add</button>
-      </li>
-    </ul>
+    <div id="container">
+      <section id="userChoice">
+        <h2>Pick some exercises...</h2>
+        <ul id="exercises">
+          <li v-for="exercise in exercises">
+            <div class="descriptiontext">
+              <h3>{{ exercise.name }} </h3>
+              <p>{{ exercise.description }}</p>
+            </div>
+            <p>{{ exercise.level }}</p>
+            <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+          </li>
+        </ul>
 
-    <h2>... or a ready-made program!</h2>
-    <ul id="programs"> blablabla{{ readymade.info }}</ul>
-    
-    
-  </section>
-  
+        <h2>... or a ready-made program!</h2>
+        <ul id="programs"> blablabla{{ readymade.info }}</ul>
 
-  <section id="workout">
-    <h2>Your workout</h2>
-    
-    <ul>
-      <li v-for="exercise in userWorkout">
 
-        <h3>{{ exercise.name }}</h3>
+      </section>
 
-        <button type="button" @click="removeExercise(exercise)" class="removeButton">
-          Remove
-        </button>
-        <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
-      </li>
-    </ul>
 
-  </section>
-  </div>
+      <section id="workout">
+        <h2>Your workout</h2>
 
-  <footer>
-    <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
-  </footer>
+        <ul>
+          <li v-for="exercise in userWorkout">
+
+            <h3>{{ exercise.name }}</h3>
+
+            <button type="button" @click="removeExercise(exercise)" class="removeButton">
+              Remove
+            </button>
+            <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
+          </li>
+        </ul>
+
+      </section>
+    </div>
+
+    <footer>
+      <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
+    </footer>
 
   </div>
 
 </body>
+
 </html>
