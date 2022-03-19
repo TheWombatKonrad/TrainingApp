@@ -1,12 +1,14 @@
 Vue.createApp({
   data() {
     return {
+      readymade: [],
       exercises: [],
       programs: [],
       userProgram: [],
       programTimerCount: '',
       exerciseTimerCount: 45,
       timersEnabled: false
+      
     }
 },
 
@@ -86,6 +88,10 @@ watch: {
 
       }
     }
+
+    
+
+   
   },
 
 

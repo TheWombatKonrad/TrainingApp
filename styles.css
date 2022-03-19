@@ -40,6 +40,7 @@ h1 {
 	color: white;
 }
 
+
 #control-bar {
 	grid-area: control;
 	display: grid;
@@ -154,6 +155,16 @@ h1 {
 
 .descriptiontext {
 	
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 120px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#programs {
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 14px;
 	height: 120px;
 	overflow: hidden;
 	overflow-y: scroll;
