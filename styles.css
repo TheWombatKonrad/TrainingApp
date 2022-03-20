@@ -18,7 +18,9 @@ ul {
 	list-style-type: none;
 }
 
-/*HEADER*/
+/*=====================
+HEADER
+=======================*/
 header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -75,18 +77,26 @@ h1 {
 	line-height: 50px;
 }
 
-/*CONTAINER*/
+/*=====================
+CONTAINER
+=======================*/
 
 #container {
-	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	box-sizing: border-box;
+
 
 	background: rgb(0, 0, 0, 0.7);
 }
 
+/*=====================
+left side
+=======================*/
+
 #userChoice {
 	box-sizing: border-box;
+	max-height: 1000px;
 	height: 100%;
   width: 100%;
 	padding: 5px;
@@ -95,7 +105,23 @@ h1 {
 	overflow-y: scroll;
 }
 
-#userChoice li {
+#userChoice li h3 {
+	width: 100%;
+	padding: 5px 10px;
+	text-align: left;
+	background: rgb(58, 58, 58, 0.7);
+}
+
+#userChoice li p {
+	padding: 5px 10px;
+}
+
+#userChoice li button {
+	width: 60px;
+	height: 40px;
+}
+
+#exercises li {
 	display: grid;
 	grid-template-columns: 5fr 1fr;
 	justify-content: space-between;
@@ -106,21 +132,30 @@ h1 {
 	padding: 5px;
 }
 
-#userChoice li h3 {
+#programs li {
+	display: grid;
+	grid-template-columns: 5fr 1fr;
+	justify-content: space-between;
+	align-items: center;
+
+	box-sizing: border-box;
 	width: 100%;
-	text-align: left;
-	padding-left: 10px;
-	background: rgb(58, 58, 58, 0.7);
+	padding: 5px;
 }
 
-#userChoice li button {
-	width: 60px;
-	height: 40px;
+.readymade-exercises {
+	list-style-type: disc;
+
 }
+
+/*=====================
+right side
+=======================*/
 
 #workout {
 	box-sizing: border-box;
-  height: 100%;
+	max-height: 1000px;
+	height: 100%;
   width: 100%;
 	padding: 5px;
 	border: 5px solid white;
@@ -153,14 +188,9 @@ h1 {
 	height: 40px;
 }
 
-.descriptiontext {
-	font-size: 14px;
-	height: 120px;
-	overflow: hidden;
-	overflow-y: scroll;
-}
-
-/*FOOTER*/
+/*=====================
+HEADER
+=======================*/
 footer {
 	height: 50px;
 	line-height: 50px;

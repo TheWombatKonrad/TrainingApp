@@ -39,7 +39,7 @@
         <h2>Pick some exercises...</h2>
         <ul id="exercises">
           <li v-for="exercise in exercises">
-            <div class="descriptiontext">
+            <div>
               <h3>{{ exercise.name }} </h3>
               <p>{{ exercise.description }}</p>
               <p>{{ exercise.level }}</p>
@@ -51,47 +51,44 @@
         <h2>... or a ready-made program!</h2>
         <ul id="programs">
           <li v-for="workout in readymades">
-            <div class="descriptiontext">
-            <h3>{{workout.workoutName}}</h3>
-            <ul class="readymade-exercises">
-              <li v-for="exercise in workout.content">
-                {{exercise.exercise}}
-              </li>
-            </ul>
-          </div>
-          <button type="button" @click="addToUserWorkout(exercise)">Add</button>
-
-          </li>
-        </ul>
-
-
-      </section>
+            <div>
+              <h3>{{workout.workoutName}}</h3>
+              <ul class="readymade-exercises">
+                <li v-for="exercise in workout.content">
+                  <p>{{exercise.exerciseName}}<p>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+            </li>
+          </ul>
+        </section>
 
 
-      <section id="workout">
-        <h2>Your workout</h2>
+        <section id="workout">
+          <h2>Your workout</h2>
 
-        <ul>
-          <li v-for="exercise in userWorkout">
+          <ul>
+            <li v-for="exercise in userWorkout">
 
-            <h3>{{ exercise.name }}</h3>
+              <h3>{{ exercise.name }}</h3>
 
-            <button type="button" @click="removeExercise(exercise)" class="removeButton">
-              Remove
-            </button>
-            <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
-          </li>
-        </ul>
+              <button type="button" @click="removeExercise(exercise)" class="removeButton">
+                Remove
+              </button>
+              <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
+            </li>
+          </ul>
 
-      </section>
+        </section>
+      </div>
+
+      <footer>
+        <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
+      </footer>
+
     </div>
 
-    <footer>
-      <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
-    </footer>
+  </body>
 
-  </div>
-
-</body>
-
-</html>
+  </html>

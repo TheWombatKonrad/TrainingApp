@@ -2,32 +2,32 @@
   {
     "name": "Sit-ups",
     "category": "stomach",
-    "description": "To perform the perfect sit up keep your feet, hips and knees aligned with knees bent and feet flat on the floor, and exhale on your way up and inhale as you return to the start position.",
+    "description": "Keep feet, hips and knees aligned, knees bent and feet flat on the floor. Exhale on the way up and inhale when returning to the starting position.",
     "level": "Beginner"
   },
   {
     "name": "Squats",
     "category": "legs",
-    "description": "Stand with your feet shoulder-width aparat or slithly wider. Extend your hands straight out in front of you to help keep your balance.\nBend at your knees and hips, sticking your butt out like you're sitting into an imaginary chair. Keep your chest lifted and your spine neutral.\nKeep your head and chest lifted to prevent your spine from rounding. Lower your hips so your knees are over your ankles. Make sure to keep your weight back into your heels to avoid too much pressure on the knees.\nKeep your body tight, and push through your heels, focusing on using your glutes to bring yourself back to the starting position in order to reduce strain on your lower back. This counts as one rep.",
+    "description": "Stand feet shoulder-width apart. Extend hands straight out  to help with balance. Bend at knees and hips, as if sitting down on a chair. Keep head and chest lifted to prevent the spine from rounding. Lower the hips until the knees are over the ankles, keeping the weight on the heels. Use the glutes to return to the starting position.",
     "level": "Beginner"
   },
   {
     "name": "Lunges",
     "category": "legs",
-    "description": "A lunge is a lower body exercise that involves stepping and bending your front and back leg.\nTo perform a lunge stand straight up facing forward with your spine and pelvis in a neutral position",
+    "description": "Stand straight up with the spine and pelvis in a neutral position. Step and bend both front and back leg.",
     "level":"Beginner"
   },
   {
     "name": "Mountain Climbers",
     "category": "full body",
-    "description":"Mountain climbers is an explosive bodyweight exercise which engages multiple muscle groups at once helping to improve your balance, agility, coordination, strength, flexibility and blood circulation.",
+    "description":".",
     "level": "Beginner"
   },
 
   {
     "name": "Push-ups",
     "category": "upper body",
-    "description": "STEPS: 1, Get down on all fours, placing your hands slightly wider than your shoulders. 2. Straighten your arms and legs. 3. Lower your body until your chest nearly touches the floor. 4. Pause, then push yourself back up. 5. Repeat.",
+    "description": "On all fours, hands placed slightly wider than the shoulders. Straighten arms and legs. Lower the body until the chest nearly touches the floor. Pause, then push up again. Repeat.",
     "level":"Beginner"
   }
 ]

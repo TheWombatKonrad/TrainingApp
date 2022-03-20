@@ -28,5 +28,10 @@ FÄRDIGA TRÄNINGSPROGRAM
 PROBLEMS
 v-bind fungerar ej med object properties, måste defineras i data()
 
+när vi tar bort från workout så tar vi bort den första av den typen från listan - hur ska vi göra för att ta bort den specifika vi tryckte på?
+
 kan en ha watch om vi ska ha två timers, watch uppdateras inte medan metoder körs
 måste lägga in raster i workoutlistan, kan inte bara vänta för då pausas stora timern också
+en liten flick för att fälla ut beskrivning
+lunge - push-ups bäst
+göra så att break försvinner automatiskt när det är två i rad
