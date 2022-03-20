@@ -1,3 +1,5 @@
+myStorage = window.localStorage;
+
 Vue.createApp({
   data() {
     return {
@@ -10,6 +12,13 @@ Vue.createApp({
       timersEnabled: false
     }
   },
+
+  watch: {
+  userWorkout: {
+      let parsed = JSON.stringify(this.userWorkout);
+      myStorage.setItem('storedData', parsed);
+    }
+},
 
   methods: {
     //adds the exercise to the userWorkout-array
@@ -25,8 +34,7 @@ Vue.createApp({
     },
 
     //removes a specified exercise from the userWorkout-array
-    removeExercise(exercise) {
-      let index = this.userWorkout.indexOf(exercise);
+    removeExercise(exercise, index) {
       this.userWorkout.splice(index, 1);
     },
 
@@ -60,13 +68,12 @@ Vue.createApp({
         let currentTime = new Date().getTime();
 
         let workoutStopTime = currentTime
-        + (this.userWorkout.length * (45 +  15) - 15) * 1000;
+        + (this.userWorkout.length * (45 + 15) - 15) * 1000;
         this.workoutTimeLeft = workoutStopTime - currentTime;
 
         let exerciseStopTime = currentTime + timeToAdd;
         this.exerciseTimeLeft = exerciseStopTime - currentTime;
 
-        while(this.workoutTimeLeft > 0){
           while (this.exerciseTimeLeft > 0) {
             this.exerciseTimeLeft = Math.round(
               ((exerciseStopTime - new Date().getTime()) / 1000));
@@ -76,7 +83,6 @@ Vue.createApp({
 
                 await new Promise(resolve => setTimeout(resolve, 1000));
               }//while
-            }//while
 
             item.classList.remove("active");
             item.querySelector(".exerciseTimer").hidden = true;

@@ -122,30 +122,33 @@ left side
 }
 
 #exercises li {
-	display: grid;
-	grid-template-columns: 5fr 1fr;
-	justify-content: space-between;
-	align-items: center;
-
 	box-sizing: border-box;
 	width: 100%;
 	padding: 5px;
 }
 
-#programs li {
+.exercises-heading {
 	display: grid;
 	grid-template-columns: 5fr 1fr;
 	justify-content: space-between;
 	align-items: center;
+}
 
+.programs-outer-li {
 	box-sizing: border-box;
 	width: 100%;
 	padding: 5px;
+}
+
+.programs-heading {
+	display: grid;
+	grid-template-columns: 5fr 1fr;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .readymade-exercises {
 	list-style-type: disc;
-
 }
 
 /*=====================

@@ -36,30 +36,33 @@
 
     <div id="container">
       <section id="userChoice">
+
         <h2>Pick some exercises...</h2>
         <ul id="exercises">
           <li v-for="exercise in exercises">
-            <div>
+            <div class="exercises-heading">
               <h3>{{ exercise.name }} </h3>
+              <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+            </div>
+
               <p>{{ exercise.description }}</p>
               <p>{{ exercise.level }}</p>
-            </div>
-            <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+
           </li>
         </ul>
 
         <h2>... or a ready-made program!</h2>
         <ul id="programs">
-          <li v-for="workout in readymades">
-            <div>
+          <li v-for="workout in readymades" class="programs-outer-li">
+            <div class="programs-heading">
               <h3>{{workout.workoutName}}</h3>
+              <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+            </div>
               <ul class="readymade-exercises">
                 <li v-for="exercise in workout.content">
                   <p>{{exercise.exerciseName}}<p>
                   </li>
                 </ul>
-              </div>
-              <button type="button" @click="addToUserWorkout(exercise)">Add</button>
             </li>
           </ul>
         </section>
@@ -69,11 +72,11 @@
           <h2>Your workout</h2>
 
           <ul>
-            <li v-for="exercise in userWorkout">
+            <li v-for="(exercise, index) in userWorkout">
 
               <h3>{{ exercise.name }}</h3>
 
-              <button type="button" @click="removeExercise(exercise)" class="removeButton">
+              <button type="button" @click="removeExercise(exercise, index)" class="removeButton">
                 Remove
               </button>
               <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
