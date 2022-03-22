@@ -22,7 +22,7 @@
 
         <button type="button" id="start" @click="startWorkout()">Start</button>
 
-        <button type="button" id="unpause" @click="unPauseWorkout()" hidden>Start</button>
+        <button type="button" id="unpause" hidden>Start</button>
 
         <button type="button" id="paus" @click="pauseWorkout()">Paus</button>
 
@@ -43,7 +43,7 @@
         <ul id="exercises">
           <li v-for="exercise in exercises">
             <div class="exercises-heading">
-              <h3>{{ exercise.name }} </h3>
+              <h3 draggable="true">{{ exercise.name }} </h3>
               <button type="button" @click="addToUserWorkout(exercise)">Add</button>
             </div>
 

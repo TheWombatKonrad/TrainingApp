@@ -115,13 +115,15 @@ Vue.createApp({
           document.getElementById('unpause').hidden = false;
 
           await new Promise(resolve => {
-              if(this.workoutActive === true){
-                resolve();
-              }
-              else {
-                window.setTimeout(this.pauseWorkout, 1000);
-              }
+            document.addEventListener("unpause", function() {
+              this.workoutActive = true;
+            });
+
+            document.getElementById('unpause').hidden = true;
+            document.getElementById('start').hidden = false;
+
           });
+
         },
 
         unPauseWorkout() {
@@ -140,7 +142,9 @@ Vue.createApp({
             item.querySelector(".removeButton").hidden = false;
             item.querySelector(".exerciseTimer").hidden = true;
           }
-        }
+        },
+
+        dragStartHandler
       },
 
 
