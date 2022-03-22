@@ -20,7 +20,7 @@ FÄRDIGA TRÄNINGSPROGRAM
 
 
 PROBLEMS
-
+behöver fixa paus och stopp
 
 en liten flick för att fälla ut beskrivning
 
