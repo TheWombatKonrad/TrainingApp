@@ -1,4 +1,4 @@
-myStorage = window.localStorage;
+localStorage = window.localStorage;
 
 Vue.createApp({
   data() {
@@ -15,8 +15,10 @@ Vue.createApp({
 
   watch: {
   userWorkout: {
-      let parsed = JSON.stringify(this.userWorkout);
-      myStorage.setItem('storedData', parsed);
+      handler() {
+        localStorage.userWorkout =  JSON.stringify(this.userWorkout);
+      },
+      deep: true,
     }
 },
 
@@ -116,5 +118,9 @@ Vue.createApp({
         response = await fetch('readymade.json');
         json = await response.json();
         this.readymades = json;
+
+        if (localStorage.userWorkout) {
+          this.userWorkout = JSON.parse(localStorage.userWorkout);
+    }
       }
     }).mount("body");
