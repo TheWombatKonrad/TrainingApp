@@ -74,7 +74,7 @@
           <ul>
             <li v-for="(exercise, index) in userWorkout">
 
-              <h3>{{ exerciseName }}</h3>
+              <h3>{{ exercise.name }}</h3>
 
               <button type="button" @click="removeExercise(exercise, index)" class="removeButton">
                 Remove
