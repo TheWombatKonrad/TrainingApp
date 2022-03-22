@@ -1,5 +1,3 @@
-localStorage = window.localStorage;
-
 Vue.createApp({
   data() {
     return {
@@ -14,13 +12,15 @@ Vue.createApp({
   },
 
   watch: {
-  userWorkout: {
+    //anytime userWorkout changes, this method runs, and addToUserWorkout
+    //the userWorkout to localStorage
+    userWorkout: {
       handler() {
         localStorage.userWorkout =  JSON.stringify(this.userWorkout);
       },
       deep: true,
     }
-},
+  },
 
   methods: {
     //adds the exercise to the userWorkout-array
@@ -43,17 +43,21 @@ Vue.createApp({
     //removes all exercises from the array
     clearProgram() {
       this.userWorkout = [];
+      this.exerciseTimeLeft = '';
     },
 
     async startWorkout() {
-      //removes the removeButton from the userProgram list items, and shows
       let workout = document.querySelectorAll("#workout ul li");
 
+      //removes the removeButton from the userProgram list items
       for (item of workout) {
         item.querySelector(".removeButton").hidden = true;
       }
 
+      //loopar igenom alla övningarna
       for (item of workout) {
+
+        //sätter klassen aktiv och 
         item.classList.add("active");
         item.querySelector(".exerciseTimer").hidden = false;
 
@@ -76,15 +80,15 @@ Vue.createApp({
         let exerciseStopTime = currentTime + timeToAdd;
         this.exerciseTimeLeft = exerciseStopTime - currentTime;
 
-          while (this.exerciseTimeLeft > 0) {
-            this.exerciseTimeLeft = Math.round(
-              ((exerciseStopTime - new Date().getTime()) / 1000));
+        while (this.exerciseTimeLeft > 0) {
+          this.exerciseTimeLeft = Math.round(
+            ((exerciseStopTime - new Date().getTime()) / 1000));
 
-              this.workoutTimeLeft = Math.round(
-                (workoutStopTime - new Date().getTime()) / 1000);
+            this.workoutTimeLeft = Math.round(
+              (workoutStopTime - new Date().getTime()) / 1000);
 
-                await new Promise(resolve => setTimeout(resolve, 1000));
-              }//while
+              await new Promise(resolve => setTimeout(resolve, 1000));
+            }//while
 
             item.classList.remove("active");
             item.querySelector(".exerciseTimer").hidden = true;
@@ -121,6 +125,6 @@ Vue.createApp({
 
         if (localStorage.userWorkout) {
           this.userWorkout = JSON.parse(localStorage.userWorkout);
-    }
+        }
       }
     }).mount("body");
