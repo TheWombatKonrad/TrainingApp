@@ -109,8 +109,25 @@ Vue.createApp({
           }//for
         },//method
 
-        pauseWorkout() {
+        async pauseWorkout() {
           this.workoutActive = false;
+          document.getElementById('start').hidden = true;
+          document.getElementById('unpause').hidden = false;
+
+          await new Promise(resolve => {
+              if(this.workoutActive === true){
+                resolve();
+              }
+              else {
+                window.setTimeout(this.pauseWorkout, 1000);
+              }
+          });
+        },
+
+        unPauseWorkout() {
+          this.workoutActive = true;
+          document.getElementById('unpause').hidden = true;
+          document.getElementById('start').hidden = false;
         },
 
         stopWorkout() {
