@@ -43,7 +43,13 @@
         <ul id="exercises">
           <li v-for="exercise in exercises">
             <div class="exercises-heading">
-              <h3 draggable="true">{{ exercise.name }} </h3>
+              <h3
+              draggable="true"
+              class="drag-el"
+              @dragstart="startDrag($evnt, item)"
+              >
+                {{ exercise.name }}
+              </h3>
               <button type="button" @click="addToUserWorkout(exercise)">Add</button>
             </div>
 
@@ -73,8 +79,14 @@
         <section id="workout">
           <h2>Your workout</h2>
 
-          <ul>
-            <li v-for="(exercise, index) in userWorkout">
+          <ul
+          >
+            <li v-for="(exercise, index) in userWorkout"
+            class="drop-zone"
+            @drop="onDrop($event, 1)"
+            @dragover.prevent
+            @dragenter.prevent
+            >
 
               <h3>{{ exercise.name }}</h3>
 

@@ -65,6 +65,8 @@ Vue.createApp({
 
       //loops through all exercises
       for (item of workout) {
+        while(this.workoutActive) {
+
           //sätter klassen aktiv och visar timern
           item.classList.add("active");
           item.querySelector(".exerciseTimer").hidden = false;
@@ -89,8 +91,7 @@ Vue.createApp({
           this.exerciseTimeLeft = exerciseStopTime - currentTime;
 
           //will loop through the exercise until it reaches 0
-          while (this.exerciseTimeLeft > 0) {
-            while(this.workoutActive) {
+            while(this.exerciseTimeLeft > 0) {
             this.exerciseTimeLeft = Math.round(
               ((exerciseStopTime - new Date().getTime()) / 1000));
 
@@ -100,12 +101,11 @@ Vue.createApp({
                 //must wait 1 sec
                 await new Promise(resolve => setTimeout(resolve, 1000));
               }
-              }//while
 
               //removes active and hides the timer
               item.classList.remove("active");
               item.querySelector(".exerciseTimer").hidden = true;
-
+}//while
           }//for
         },//method
 
@@ -133,18 +133,30 @@ Vue.createApp({
         },
 
         stopWorkout() {
-          this.timersEnabled = false
-          this.workoutTimeLeft = 30
+          this.workoutActive = false;
+          this.exerciseTimeLeft = 0;
+          this.workoutTimeLeft = '';
 
           let workout = document.querySelectorAll("#workout ul li");
 
           for (item of workout) {
             item.querySelector(".removeButton").hidden = false;
             item.querySelector(".exerciseTimer").hidden = true;
+            item.classList.remove("active");
           }
         },
+        startDrag(evt, item){
+          evt.dataTransfer.dropEffect = "move"
+          evt.dataTransfer.effectAllowed = "move"
+          evt.dataTransfer.setData('itemID', item.id)
+        },
 
-        dragStartHandler
+        onDrop(evt, list){
+          const itemID = evt.dataTransfer.getData("itemID")
+          const item = this.exercises.find(item => item.id == itemID)
+          item.list = list
+        }
+
       },
 
 
