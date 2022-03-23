@@ -46,11 +46,11 @@
               <h3
               draggable="true"
               class="drag-el"
-              @dragstart="startDrag($evnt, item)"
+              @dragstart="startWorkoutDrag($event, exercise)"
               >
                 {{ exercise.name }}
               </h3>
-              <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+              <button type="button" @click="addExToUserWorkout(exercise)">Add</button>
             </div>
 
               <p>{{ exercise.description }}</p>
@@ -63,12 +63,18 @@
         <ul id="programs">
           <li v-for="workout in readymades" class="programs-outer-li">
             <div class="programs-heading">
-              <h3>{{workout.workoutName}}</h3>
-              <button type="button" @click="addToUserWorkout(exercise)">Add</button>
+              <h3
+              draggable="true"
+              class="drag-el"
+              @dragstart="startProgramDrag($event, workout)"
+              >{{workout.workoutName}}</h3>
+              <button type="button" @click="addProgramToUserWorkout(workout.content)">
+                Add
+              </button>
             </div>
               <ul class="readymade-exercises">
                 <li v-for="exercise in workout.content">
-                  <p>{{exercise.exerciseName}}<p>
+                  <p>{{exercise.name}}<p>
                   </li>
                 </ul>
             </li>
@@ -76,17 +82,14 @@
         </section>
 
 
-        <section id="workout">
+        <section id="workout"
+        class="drop-zone"
+        @drop="onDrop($event)"
+        @dragover.prevent
+        @dragenter.prevent>
           <h2>Your workout</h2>
-
-          <ul
-          >
-            <li v-for="(exercise, index) in userWorkout"
-            class="drop-zone"
-            @drop="onDrop($event, 1)"
-            @dragover.prevent
-            @dragenter.prevent
-            >
+          <ul>
+            <li v-for="(exercise, index) in userWorkout">
 
               <h3>{{ exercise.name }}</h3>
 
