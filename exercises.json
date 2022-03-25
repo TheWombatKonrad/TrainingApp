@@ -2,6 +2,7 @@
   {
     "name": "Sit-ups",
     "id": "1",
+    "length": 45,
     "category": "stomach",
     "description": "Keep feet, hips and knees aligned, knees bent and feet flat on the floor. Exhale on the way up and inhale when returning to the starting position.",
     "level": "Beginner"
@@ -9,6 +10,7 @@
   {
     "name": "Squats",
     "id": "2",
+    "length": 45,
     "category": "legs",
     "description": "Stand feet shoulder-width apart. Extend hands straight out  to help with balance. Bend at knees and hips, as if sitting down on a chair. Keep head and chest lifted to prevent the spine from rounding. Lower the hips until the knees are over the ankles, keeping the weight on the heels. Use the glutes to return to the starting position.",
     "level": "Beginner"
@@ -16,6 +18,7 @@
   {
     "name": "Lunges",
     "id": "3",
+    "length": 45,
     "category": "legs",
     "description": "Stand straight up with the spine and pelvis in a neutral position. Step and bend both front and back leg.",
     "level":"Beginner"
@@ -23,6 +26,7 @@
   {
     "name": "Mountain Climbers",
     "id": "4",
+    "length": 45,
     "category": "full body",
     "description":"skksklsklsalk",
     "level": "Beginner"
@@ -31,6 +35,7 @@
   {
     "name": "Push-ups",
     "id": "5",
+    "length": 45,
     "category": "upper body",
     "description": "On all fours, hands placed slightly wider than the shoulders. Straighten arms and legs. Lower the body until the chest nearly touches the floor. Pause, then push up again. Repeat.",
     "level":"Beginner"

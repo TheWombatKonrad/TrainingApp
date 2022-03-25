@@ -22,13 +22,11 @@
 
         <button type="button" id="start" @click="startWorkout()">Start</button>
 
-        <button type="button" id="unpause" hidden>Start</button>
-
-        <button type="button" id="paus" @click="pauseWorkout()">Paus</button>
+        <button type="button" id="next" @click="nextExercise()" hidden>Next</button>
 
         <button type="button" id="stop" @click="stopWorkout()">Stop</button>
 
-        <button type="button" @click="clearProgram()">Clear</button>
+        <button type="button" @click="clearUserWorkout()">Clear</button>
 
         <section id="overall-time">Total Workout Time: {{workoutTimeLeft}}</section>
 
@@ -46,7 +44,7 @@
               <h3
               draggable="true"
               class="drag-el"
-              @dragstart="startWorkoutDrag($event, exercise)"
+              @dragstart="startDragWorkout($event, exercise)"
               >
                 {{ exercise.name }}
               </h3>
@@ -66,7 +64,7 @@
               <h3
               draggable="true"
               class="drag-el"
-              @dragstart="startProgramDrag($event, workout)"
+              @dragstart="startDragProgram($event, workout)"
               >{{workout.workoutName}}</h3>
               <button type="button" @click="addProgramToUserWorkout(workout.content)">
                 Add

@@ -46,7 +46,7 @@ h1 {
 #control-bar {
 	grid-area: control;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
+	grid-template-columns: 1fr 1fr 1fr 4fr;
 	justify-content: space-between;
 
 	box-sizing: content-box;
