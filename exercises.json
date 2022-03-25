@@ -5,7 +5,8 @@
     "length": 45,
     "category": "stomach",
     "description": "Keep feet, hips and knees aligned, knees bent and feet flat on the floor. Exhale on the way up and inhale when returning to the starting position.",
-    "level": "Beginner"
+    "level": "easy",
+    "image": "situps.jpg"
   },
   {
     "name": "Squats",
@@ -13,7 +14,8 @@
     "length": 45,
     "category": "legs",
     "description": "Stand feet shoulder-width apart. Extend hands straight out  to help with balance. Bend at knees and hips, as if sitting down on a chair. Keep head and chest lifted to prevent the spine from rounding. Lower the hips until the knees are over the ankles, keeping the weight on the heels. Use the glutes to return to the starting position.",
-    "level": "Beginner"
+    "level": "easy",
+    "image": "squats.jpg"
   },
   {
     "name": "Lunges",
@@ -21,23 +23,61 @@
     "length": 45,
     "category": "legs",
     "description": "Stand straight up with the spine and pelvis in a neutral position. Step and bend both front and back leg.",
-    "level":"Beginner"
+    "level":"easy",
+    "image": "lunges.jpg"
   },
   {
     "name": "Mountain Climbers",
     "id": "4",
     "length": 45,
     "category": "full body",
-    "description":"skksklsklsalk",
-    "level": "Beginner"
+    "description":"In a plank position, pull your knee as for into your chest as you can. Repeat, alternating legs.",
+    "level": "hard",
+    "image": "mountain-climbers.jpg"
   },
-
   {
     "name": "Push-ups",
     "id": "5",
     "length": 45,
     "category": "upper body",
     "description": "On all fours, hands placed slightly wider than the shoulders. Straighten arms and legs. Lower the body until the chest nearly touches the floor. Pause, then push up again. Repeat.",
-    "level":"Beginner"
+    "level":"easy",
+    "image": "push-up.jpg"
+  },
+  {
+    "name": "Side-Lunges",
+    "id": "6",
+    "length": 45,
+    "category": "legs, core",
+    "description": "Standing up, take a wide step to alternating sides. Repeat.",
+    "level":"easy",
+    "image": "side-lunge.jpg"
+  },
+  {
+    "name": "Plank",
+    "id": "7",
+    "length": 45,
+    "category": "core",
+    "description": "Lay on your stomache and push up onto your hands.",
+    "level":"easy",
+    "image": "plank.jpg"
+  },
+  {
+    "name": "Side Plank",
+    "id": "8",
+    "length": 45,
+    "category": "core",
+    "description": "Lay on the side and push up on your hand.",
+    "level":"easy",
+    "image": "side-plank.jpg"
+  },
+  {
+    "name": "Crunches",
+    "id": "9",
+    "length": 45,
+    "category": "core",
+    "description": "Lay on your back, lift your one leg, alternating sides, while doing a situp to the opposite side.",
+    "level":"hard",
+    "image": "crunches.jpg"
   }
 ]

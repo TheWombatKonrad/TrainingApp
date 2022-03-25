@@ -22,16 +22,20 @@ ul {
 HEADER
 =======================*/
 header {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas:
-		'header control';
-
 	box-sizing: border-box;
 	width: 100%;
 	padding: 20px 0;
 	background: rgb(47, 10, 84, 0.7);
 	color: black;
+}
+
+@media only screen and (min-width: 640px){
+	header {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+		'header control';
+	}
 }
 
 h1 {
@@ -42,16 +46,47 @@ h1 {
 	color: white;
 }
 
-
 #control-bar {
 	grid-area: control;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 4fr;
 	justify-content: space-between;
 
 	box-sizing: content-box;
 	margin: 0 5px;
 	font-size: 20px;
+}
+
+@media only screen and (min-width: 640px){
+	#control-bar {
+		grid-template-columns: 1fr 1fr 1fr 4fr;
+	}
+}
+
+@media only screen and (max-width: 640px){
+	#control-bar {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+		'start stop clear'
+		'time time time';
+	}
+
+	#start {
+		grid-area: start;
+	}
+	#next
+	{
+		grid-area: start;
+	}
+	#stop {
+		grid-area: stop;
+	}
+	#clear {
+		grid-area: clear;
+	}
+	#overall-time{
+		grid-area: time;
+	}
 }
 
 #control-bar button {
@@ -81,31 +116,73 @@ h1 {
 CONTAINER
 =======================*/
 
+@media only screen and (min-width: 640px){
+	#container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: 640px){
+	#container {
+		display: flex;
+		flex-flow: column;
+	}
+
+	#workout {
+		order: 1;
+	}
+
+	#userChoice {
+		order: 2;
+	}
+}
+
 #container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 	box-sizing: border-box;
-
-
 	background: rgb(0, 0, 0, 0.7);
 }
 
 /*=====================
 left side
 =======================*/
+@media only screen and (min-width: 1280px){
+	.description-container{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 5px;
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	img {
+		margin-left: 10px;
+	}
+
+
+img {
+	width: 100%;
+	max-width: 200px;
+}
+
+@media only screen and (min-width: 640px){
+	#userChoice {
+		overflow: hidden;
+		overflow-y: scroll;
+		max-height: 1000px;
+	}
+}
 
 #userChoice {
 	box-sizing: border-box;
-	max-height: 1000px;
 	height: 100%;
-  width: 100%;
+	width: 100%;
 	padding: 5px;
 	border: 5px solid white;
-	overflow: hidden;
-	overflow-y: scroll;
 }
 
 #userChoice li h3 {
+	box-sizing: border-box;
 	width: 100%;
 	padding: 5px 10px;
 	text-align: left;
@@ -154,15 +231,27 @@ left side
 /*=====================
 right side
 =======================*/
+@media only screen and (max-width: 640px){
+	#workout {
+		margin-bottom: -4px;
+	}
+}
+
+@media only screen and (min-width: 640px){
+	#workout {
+		border-left: 0px;
+		overflow: hidden;
+		overflow-y: scroll;
+		max-height: 1000px;
+	}
+}
 
 #workout {
 	box-sizing: border-box;
-	max-height: 1000px;
 	height: 100%;
-  width: 100%;
+	width: 100%;
 	padding: 5px;
 	border: 5px solid white;
-	border-left: 0px;
 }
 
 #workout li {

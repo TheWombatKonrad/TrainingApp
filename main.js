@@ -132,7 +132,6 @@ Vue.createApp({
         nextExercise() {
           this.workoutStopTime = this.workoutStopTime - (this.exerciseTimeLeft * 1000);
           this.exerciseTimeLeft = 0;
-          console.log(this.workoutStopTime);
         },
 
         stopWorkout() {

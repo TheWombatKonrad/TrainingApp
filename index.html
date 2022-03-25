@@ -26,7 +26,7 @@
 
         <button type="button" id="stop" @click="stopWorkout()">Stop</button>
 
-        <button type="button" @click="clearUserWorkout()">Clear</button>
+        <button type="button" id="clear" @click="clearUserWorkout()">Clear</button>
 
         <section id="overall-time">Total Workout Time: {{workoutTimeLeft}}</section>
 
@@ -51,8 +51,16 @@
               <button type="button" @click="addExToUserWorkout(exercise)">Add</button>
             </div>
 
-              <p>{{ exercise.description }}</p>
-              <p>{{ exercise.level }}</p>
+            <div class="description-container">
+              <div>
+              <p class="difficulty">Difficulty: {{ exercise.level }}</p>
+              <p class="description">{{ exercise.description }}</p>
+            </div>
+              <img v-bind:src="'images/' + exercise.image" v-bind:alt="exercise.image"
+              draggable="true"
+              class="drag-el"
+              @dragstart="startDragWorkout($event, exercise)">
+            </div>
 
           </li>
         </ul>
