@@ -5,7 +5,6 @@ Träning: En applikation som låter användaren sätta ihop ett personligt trän
 VG-funktionalitet: Läs upp övningarna i träningsprogrammet med Web Speech API (så att användaren inte behöver titta på skärmen) och sätt lämpliga pauser i uppläsningen utifrån antalet repetitioner och hur lång tid en repetition uppskattas ta.
 
 
-Web Speech API - lämpliga pauser
 
 ÖVNING
 - namn på övning
