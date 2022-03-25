@@ -16,7 +16,7 @@ Vue.createApp({
     //userWorkout to localStorage
     userWorkout: {
       handler() {
-        localStorage.userWorkout =  JSON.stringify(this.userWorkout);
+        localStorage.userWorkout = JSON.stringify(this.userWorkout);
       },
       deep: true,
     }
@@ -26,8 +26,8 @@ Vue.createApp({
     //adds the exercise to the userWorkout-array
     addExToUserWorkout(exercise) {
       //if there is already an exercise added, it adds a break first
-      if(this.userWorkout.length > 0){
-        let temp = { name:"Break", length: 15 };
+      if (this.userWorkout.length > 0) {
+        let temp = { name: "Break", length: 15 };
 
         this.userWorkout.push(temp);
       }
@@ -36,14 +36,14 @@ Vue.createApp({
     },
 
     //adds the program to the userWorkout-array
-    addProgramToUserWorkout(workout){
+    addProgramToUserWorkout(workout) {
       //makes sure the array is empty first
       this.userWorkout = [];
 
-      for(item of workout){
+      for (item of workout) {
         //if there is already an exercise added, it adds a break first
-        if(this.userWorkout.length > 0){
-          let temp = { name:"Break", length: 15 };
+        if (this.userWorkout.length > 0) {
+          let temp = { name: "Break", length: 15 };
 
           this.userWorkout.push(temp);
         }
@@ -79,7 +79,7 @@ Vue.createApp({
       //calculates the stop time
       let timeToAdd = 0;
 
-      for(item of this.userWorkout){
+      for (item of this.userWorkout) {
         timeToAdd = timeToAdd + item.length;
       }
 
@@ -94,19 +94,19 @@ Vue.createApp({
       this.workoutTimeLeft = '';
     },//method
 
-    async loopThroughExercises(workout){
+    async loopThroughExercises(workout) {
       for (item of workout) {
-        if(this.workoutActive){
+        if (this.workoutActive) {
 
           //sätter klassen aktiv och visar timern
           item.classList.add("active");
           item.querySelector(".exerciseTimer").hidden = false;
 
-          if(item.querySelector('h3').textContent.includes('Break')){
+          if (item.querySelector('h3').textContent.includes('Break')) {
             timeToAdd = 15000;
           }
 
-          else{
+          else {
             timeToAdd = 45000;
           }
 
@@ -118,23 +118,23 @@ Vue.createApp({
 
           //will loop through the exercise until it reaches 0
           //each time calculating the amount of time left
-          while(this.exerciseTimeLeft > 0) {
+          while (this.exerciseTimeLeft > 0) {
             this.exerciseTimeLeft = Math.round(
               ((exerciseStopTime - new Date().getTime()) / 1000));
 
-              this.workoutTimeLeft = Math.round(
-                (this.workoutStopTime - new Date().getTime()) / 1000);
+            this.workoutTimeLeft = Math.round(
+              (this.workoutStopTime - new Date().getTime()) / 1000);
 
-                //must wait 1 sec
-                await new Promise(resolve => setTimeout(resolve, 1000));
-              }//while
+            //must wait 1 sec
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          }//while
 
-              //removes active and hides the timer
-              item.classList.remove("active");
-              item.querySelector(".exerciseTimer").hidden = true;
-            }//if
-          }//for
-        },//method
+          //removes active and hides the timer
+          item.classList.remove("active");
+          item.querySelector(".exerciseTimer").hidden = true;
+        }//if
+      }//for
+    },//method
 
     nextExercise() {
       this.workoutStopTime = this.workoutStopTime - (this.exerciseTimeLeft * 1000);
@@ -155,33 +155,33 @@ Vue.createApp({
       }
     },
 
-    startDragWorkout(evt, item){
+    startDragWorkout(evt, item) {
       evt.dataTransfer.dropEffect = "move"
       evt.dataTransfer.effectAllowed = "move"
       evt.dataTransfer.setData('itemID', item.id)
       evt.dataTransfer.setData('isList', false)
     },
 
-    startDragProgram(evt, item){
+    startDragProgram(evt, item) {
       evt.dataTransfer.dropEffect = "move"
       evt.dataTransfer.effectAllowed = "move"
       evt.dataTransfer.setData('itemID', item.id)
       evt.dataTransfer.setData('isList', true)
     },
 
-    onDrop(evt){
+    onDrop(evt) {
       const itemID = evt.dataTransfer.getData("itemID")
       const isList = evt.dataTransfer.getData('isList')
 
-      if(isList === "true") {
+      if (isList === "true") {
         this.userWorkout = [];
 
         const list = this.readymades.find(list => list.id == itemID);
 
-        for(item of list.content){
+        for (item of list.content) {
           //if there is already an exercise added, it adds a break first
-          if(this.userWorkout.length > 0){
-            let temp = { name:"Break", length: 15 };
+          if (this.userWorkout.length > 0) {
+            let temp = { name: "Break", length: 15 };
 
             this.userWorkout.push(temp);
           }

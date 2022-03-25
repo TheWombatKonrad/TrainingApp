@@ -3,33 +3,78 @@
         "workoutName": "Beginners Full Body Workout:",
         "id": "1",
         "content": [
-            {"name": "Barbell back squats", "length": 45 },
-            {"name": "Pull-ups/chin-ups", "length": 45 } ,
-            {"name": "Overhead Press, seated or standing, dumbbell or barbell", "length": 45 },
-            {"name": "Dumbbell single arm row", "length": 45},
-            {"name": "Bench press dumbbell or barbell", "length": 45}
+            {
+                "name": "Barbell back squats",
+                "length": 45
+            },
+            {
+                "name": "Pull-ups/chin-ups",
+                "length": 45
+            },
+            {
+                "name": "Overhead Press, seated or standing, dumbbell or barbell",
+                "length": 45
+            },
+            {
+                "name": "Dumbbell single arm row",
+                "length": 45
+            },
+            {
+                "name": "Bench press dumbbell or barbell",
+                "length": 45
+            }
         ]
     },
     {
         "workoutName": "Medium fullbody Workout :",
         "id": "2",
         "content": [
-            {"name": "Dumbbell squats", "length": 45},
-            {"name": "Mountain climbers", "length": 45},
-            {"name": "Dumbbell chest press on bench", "length": 45},
-            {"name": "Back raises", "length": 45},
-            {"name": "Plank", "length": 45}
+            {
+                "name": "Dumbbell squats",
+                "length": 45
+            },
+            {
+                "name": "Mountain climbers",
+                "length": 45
+            },
+            {
+                "name": "Dumbbell chest press on bench",
+                "length": 45
+            },
+            {
+                "name": "Back raises",
+                "length": 45
+            },
+            {
+                "name": "Plank",
+                "length": 45
+            }
         ]
     },
     {
         "workoutName": "Hard fullbody workout",
         "id": "3",
         "content": [
-            {"name": "Single-leg squat", "length": 45},
-            {"name": "Box incline pushup", "length": 45},
-            {"name": "Basic crunches", "length": 45},
-            {"name": "Plank", "length": 45},
-            {"name": "Squat thrusts (aka “burpees”)", "length": 45}
+            {
+                "name": "Single-leg squat",
+                "length": 45
+            },
+            {
+                "name": "Box incline pushup",
+                "length": 45
+            },
+            {
+                "name": "Basic crunches",
+                "length": 45
+            },
+            {
+                "name": "Plank",
+                "length": 45
+            },
+            {
+                "name": "Squat thrusts (aka “burpees”)",
+                "length": 45
+            }
         ]
     }
 ]
