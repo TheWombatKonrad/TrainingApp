@@ -29,12 +29,12 @@ header {
 	color: black;
 }
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 640px) {
 	header {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
-		'header control';
+			'header control';
 	}
 }
 
@@ -56,35 +56,38 @@ h1 {
 	font-size: 20px;
 }
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 640px) {
 	#control-bar {
 		grid-template-columns: 1fr 1fr 1fr 4fr;
 	}
 }
 
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 640px) {
 	#control-bar {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-template-areas:
-		'start stop clear'
-		'time time time';
+			'start stop clear'
+			'time time time';
 	}
 
 	#start {
 		grid-area: start;
 	}
-	#next
-	{
+
+	#next {
 		grid-area: start;
 	}
+
 	#stop {
 		grid-area: stop;
 	}
+
 	#clear {
 		grid-area: clear;
 	}
-	#overall-time{
+
+	#overall-time {
 		grid-area: time;
 	}
 }
@@ -116,14 +119,14 @@ h1 {
 CONTAINER
 =======================*/
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 640px) {
 	#container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 640px) {
 	#container {
 		display: flex;
 		flex-flow: column;
@@ -160,131 +163,131 @@ left side
 	}
 }
 
-img {
-	width: 100%;
-	max-width: 200px;
-}
-
-@media only screen and (min-width: 640px){
-	#userChoice {
-		overflow: hidden;
-		overflow-y: scroll;
-		max-height: 1000px;
+	img {
+		width: 100%;
+		max-width: 200px;
 	}
-}
 
-#userChoice {
-	box-sizing: border-box;
-	height: 100%;
-	width: 100%;
-	padding: 5px;
-	border: 5px solid white;
-}
+	@media only screen and (min-width: 640px) {
+		#userChoice {
+			overflow: hidden;
+			overflow-y: scroll;
+			max-height: 1000px;
+		}
+	}
 
-#userChoice li h3 {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 5px 10px;
-	text-align: left;
-	background: rgb(58, 58, 58, 0.7);
-}
+	#userChoice {
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		padding: 5px;
+		border: 5px solid white;
+	}
 
-#userChoice li p {
-	padding: 5px 10px;
-}
+	#userChoice li h3 {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px 10px;
+		text-align: left;
+		background: rgb(58, 58, 58, 0.7);
+	}
 
-#userChoice li button {
-	width: 60px;
-	height: 40px;
-}
+	#userChoice li p {
+		padding: 5px 10px;
+	}
 
-#exercises li {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 5px;
-}
+	#userChoice li button {
+		width: 60px;
+		height: 40px;
+	}
 
-.exercises-heading {
-	display: grid;
-	grid-template-columns: 5fr 1fr;
-	justify-content: space-between;
-	align-items: center;
-}
+	#exercises li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px;
+	}
 
-.programs-outer-li {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 5px;
-}
+	.exercises-heading {
+		display: grid;
+		grid-template-columns: 5fr 1fr;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-.programs-heading {
-	display: grid;
-	grid-template-columns: 5fr 1fr;
-	justify-content: space-between;
-	align-items: center;
-}
+	.programs-outer-li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px;
+	}
 
-.readymade-exercises {
-	list-style-type: disc;
-}
+	.programs-heading {
+		display: grid;
+		grid-template-columns: 5fr 1fr;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-/*=====================
+	.readymade-exercises {
+		list-style-type: disc;
+	}
+
+	/*=====================
 right side
 =======================*/
-@media only screen and (max-width: 640px){
-	#workout {
-		margin-bottom: -4px;
+	@media only screen and (max-width: 640px) {
+		#workout {
+			margin-bottom: -4px;
+		}
 	}
-}
 
-@media only screen and (min-width: 640px){
-	#workout {
-		border-left: 0px;
-		overflow: hidden;
-		overflow-y: scroll;
-		max-height: 1000px;
+	@media only screen and (min-width: 640px) {
+		#workout {
+			border-left: 0px;
+			overflow: hidden;
+			overflow-y: scroll;
+			max-height: 1000px;
+		}
 	}
-}
 
-#workout {
-	box-sizing: border-box;
-	height: 100%;
-	width: 100%;
-	padding: 5px;
-	border: 5px solid white;
-}
+	#workout {
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		padding: 5px;
+		border: 5px solid white;
+	}
 
-#workout li {
-	display: grid;
-	grid-template-columns: 5fr 1fr;
-	justify-content: space-between;
-	align-items: center;
+	#workout li {
+		display: grid;
+		grid-template-columns: 5fr 1fr;
+		justify-content: space-between;
+		align-items: center;
 
-	box-sizing: border-box;
-	width: 100%;
-	padding: 5px;
-}
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px;
+	}
 
-#workout li h3 {
-	width: 100%;
-	text-align: left;
-	padding-left: 10px;
-}
+	#workout li h3 {
+		width: 100%;
+		text-align: left;
+		padding-left: 10px;
+	}
 
-.active h3 {
-	background: rgb(60, 102, 43, 0.7);
-}
+	.active h3 {
+		background: rgb(60, 102, 43, 0.7);
+	}
 
-#workout li button {
-	width: 60px;
-	height: 40px;
-}
+	#workout li button {
+		width: 60px;
+		height: 40px;
+	}
 
-/*=====================
+	/*=====================
 HEADER
 =======================*/
-footer {
-	height: 50px;
-	line-height: 50px;
-	margin: 0 10px;
-}
+	footer {
+		height: 50px;
+		line-height: 50px;
+		margin: 0 10px;
+	}

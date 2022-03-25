@@ -23,7 +23,7 @@
     "length": 45,
     "category": "legs",
     "description": "Stand straight up with the spine and pelvis in a neutral position. Step and bend both front and back leg.",
-    "level":"easy",
+    "level": "easy",
     "image": "lunges.jpg"
   },
   {
@@ -31,7 +31,7 @@
     "id": "4",
     "length": 45,
     "category": "full body",
-    "description":"In a plank position, pull your knee as for into your chest as you can. Repeat, alternating legs.",
+    "description": "In a plank position, pull your knee as for into your chest as you can. Repeat, alternating legs.",
     "level": "hard",
     "image": "mountain-climbers.jpg"
   },
@@ -41,7 +41,7 @@
     "length": 45,
     "category": "upper body",
     "description": "On all fours, hands placed slightly wider than the shoulders. Straighten arms and legs. Lower the body until the chest nearly touches the floor. Pause, then push up again. Repeat.",
-    "level":"easy",
+    "level": "easy",
     "image": "push-up.jpg"
   },
   {
@@ -50,7 +50,7 @@
     "length": 45,
     "category": "legs, core",
     "description": "Standing up, take a wide step to alternating sides. Repeat.",
-    "level":"easy",
+    "level": "easy",
     "image": "side-lunge.jpg"
   },
   {
@@ -59,7 +59,7 @@
     "length": 45,
     "category": "core",
     "description": "Lay on your stomache and push up onto your hands.",
-    "level":"easy",
+    "level": "easy",
     "image": "plank.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "length": 45,
     "category": "core",
     "description": "Lay on the side and push up on your hand.",
-    "level":"easy",
+    "level": "easy",
     "image": "side-plank.jpg"
   },
   {
@@ -77,7 +77,7 @@
     "length": 45,
     "category": "core",
     "description": "Lay on your back, lift your one leg, alternating sides, while doing a situp to the opposite side.",
-    "level":"hard",
+    "level": "hard",
     "image": "crunches.jpg"
   }
 ]

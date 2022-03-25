@@ -41,11 +41,7 @@
         <ul id="exercises">
           <li v-for="exercise in exercises">
             <div class="exercises-heading">
-              <h3
-              draggable="true"
-              class="drag-el"
-              @dragstart="startDragWorkout($event, exercise)"
-              >
+              <h3 draggable="true" class="drag-el" @dragstart="startDragWorkout($event, exercise)">
                 {{ exercise.name }}
               </h3>
               <button type="button" @click="addExToUserExercise(exercise)">Add</button>
@@ -70,52 +66,46 @@
         <ul id="programs">
           <li v-for="workout in readymades" class="programs-outer-li">
             <div class="programs-heading">
-              <h3
-              draggable="true"
-              class="drag-el"
-              @dragstart="startDragProgram($event, workout)"
-              >{{workout.workoutName}}</h3>
+              <h3 draggable="true" class="drag-el" @dragstart="startDragProgram($event, workout)">
+                {{workout.workoutName}}</h3>
               <button type="button" @click="addProgramToUserWorkout(workout.content)">
                 Add
               </button>
             </div>
-              <ul class="readymade-exercises">
-                <li v-for="exercise in workout.content">
-                  <p>{{exercise.name}}<p>
-                  </li>
-                </ul>
-            </li>
-          </ul>
-        </section>
+            <ul class="readymade-exercises">
+              <li v-for="exercise in workout.content">
+                <p>{{exercise.name}}
+                <p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
 
-        <section id="workout"
-        class="drop-zone"
-        @drop="onDrop($event)"
-        @dragover.prevent
-        @dragenter.prevent>
-          <h2>Your workout</h2>
-          <ul>
-            <li v-for="(exercise, index) in userWorkout">
+      <section id="workout" class="drop-zone" @drop="onDrop($event)" @dragover.prevent @dragenter.prevent>
+        <h2>Your workout</h2>
+        <ul>
+          <li v-for="(exercise, index) in userWorkout">
 
-              <h3>{{ exercise.name }}</h3>
+            <h3>{{ exercise.name }}</h3>
 
-              <button type="button" @click="removeExercise(exercise, index)" class="removeButton">
-                Remove
-              </button>
-              <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
-            </li>
-          </ul>
+            <button type="button" @click="removeExercise(exercise, index)" class="removeButton">
+              Remove
+            </button>
+            <span class="exerciseTimer" hidden>{{exerciseTimeLeft}}s</span>
+          </li>
+        </ul>
 
-        </section>
-      </div>
-
-      <footer>
-        <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
-      </footer>
-
+      </section>
     </div>
 
-  </body>
+    <footer>
+      <p><small>By Malte Nilsson och Jens Malmqvist</small></p>
+    </footer>
 
-  </html>
+  </div>
+
+</body>
+
+</html>

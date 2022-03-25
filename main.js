@@ -16,7 +16,7 @@ Vue.createApp({
     //userWorkout to localStorage
     userWorkout: {
       handler() {
-        localStorage.userWorkout =  JSON.stringify(this.userWorkout);
+        localStorage.userWorkout = JSON.stringify(this.userWorkout);
       },
       deep: true,
     }
@@ -26,8 +26,8 @@ Vue.createApp({
     //adds the exercise to the userWorkout-array
     addExToUserWorkout(exercise) {
       //if there is already an exercise added, it adds a break first
-      if(this.userWorkout.length > 0){
-        let temp = { name:"Break", length: 15 };
+      if (this.userWorkout.length > 0) {
+        let temp = { name: "Break", length: 15 };
 
         this.userWorkout.push(temp);
       }
@@ -36,14 +36,14 @@ Vue.createApp({
     },
 
     //adds the program to the userWorkout-array
-    addProgramToUserWorkout(workout){
+    addProgramToUserWorkout(workout) {
       //makes sure the array is empty first
       this.userWorkout = [];
 
-      for(item of workout){
+      for (item of workout) {
         //if there is already an exercise added, it adds a break first
-        if(this.userWorkout.length > 0){
-          let temp = { name:"Break", length: 15 };
+        if (this.userWorkout.length > 0) {
+          let temp = { name: "Break", length: 15 };
 
           this.userWorkout.push(temp);
         }
@@ -90,7 +90,7 @@ Vue.createApp({
 
       //loops through all exercises
       for (item of workout) {
-        if(this.workoutActive){
+        if (this.workoutActive) {
 
           //list item is set to active and the timer is unhidden
           item.classList.add("active");
@@ -111,16 +111,16 @@ Vue.createApp({
 
           //will loop through the exercise until it reaches 0
           //each time calculating the amount of time left
-          while(this.exerciseTimeLeft > 0) {
+          while (this.exerciseTimeLeft > 0) {
             this.exerciseTimeLeft = Math.round(
               ((exerciseStopTime - new Date().getTime()) / 1000));
 
-              this.workoutTimeLeft = Math.round(
-                (this.workoutStopTime - new Date().getTime()) / 1000);
+            this.workoutTimeLeft = Math.round(
+              (this.workoutStopTime - new Date().getTime()) / 1000);
 
-                //must wait 1 sec
-                await new Promise(resolve => setTimeout(resolve, 1000));
-              }//while
+            //must wait 1 sec
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          }//while
 
               //removes active and hides the timer
               item.classList.remove("active");
@@ -176,7 +176,7 @@ Vue.createApp({
       evt.dataTransfer.setData('isList', true)
     },
 
-    onDrop(evt){
+    onDrop(evt) {
       const itemID = evt.dataTransfer.getData("itemID")
       const isList = evt.dataTransfer.getData('isList')
 
@@ -186,10 +186,10 @@ Vue.createApp({
 
         const list = this.readymades.find(list => list.id == itemID);
 
-        for(item of list.content){
+        for (item of list.content) {
           //if there is already an exercise added, it adds a break first
-          if(this.userWorkout.length > 0){
-            let temp = { name:"Break", length: 15 };
+          if (this.userWorkout.length > 0) {
+            let temp = { name: "Break", length: 15 };
 
             this.userWorkout.push(temp);
           }
