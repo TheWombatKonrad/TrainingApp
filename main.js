@@ -70,6 +70,7 @@ Vue.createApp({
       document.getElementById('next').hidden = false;
 
       //removes the removeButton from the userProgram list items
+      let workout = document.querySelectorAll("#workout ul li");
       for (item of workout) {
         item.querySelector(".removeButton").hidden = true;
       }
@@ -77,8 +78,6 @@ Vue.createApp({
       //makes repeated starts not possible and also necessary for
       //the stop function
       this.workoutActive = true;
-
-      let workout = document.querySelectorAll("#workout ul li");
 
       //calculates the stop time
       let timeToAdd = 0;
