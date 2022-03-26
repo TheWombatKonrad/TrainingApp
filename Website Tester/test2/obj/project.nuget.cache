@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DzF+HcXjs1sZKZ4OsmKNBscHgXB2t+p+WioQKrMfdL7kF6cqlIGJY5egWon5DVD5qq89HjEDc6lYZ6GZsUu87w==",
+  "dgSpecHash": "TFqC4Wgv/pNQGdayNuZFoihcQKxdGGMCpHpMPdG4NMPuFcAVPB5IL+Euj82AvWI5ExWH0VPovVWU9WsHF7sFKw==",
   "success": true,
   "projectFilePath": "G:\\Min enhet\\Dokument\\Skola\\.NET\\Frontend\\Inlämning 4\\Website Tester\\test2\\test2.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "C:\\Users\\womba\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\womba\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\womba\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\womba\\.nuget\\packages\\selenium.support\\4.1.0\\selenium.support.4.1.0.nupkg.sha512",
     "C:\\Users\\womba\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512",
     "C:\\Users\\womba\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\womba\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",

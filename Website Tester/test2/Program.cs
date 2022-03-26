@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Support.UI;
 
 namespace TodoTester
 {
@@ -21,22 +22,18 @@ namespace TodoTester
         }
 
         [TestMethod]
-        public void CheckAddTodo()
+        public void CheckThatListsHaveLoaded()
         {
-            var searchInput = browser.FindElement(By.Id("new-todo"));
-
-            searchInput.SendKeys("Test");
-            searchInput.SendKeys(Keys.Enter);
-
-            bool newTodo = browser.FindElement(By.CssSelector("#todo-list li")).Displayed;
-
-            Assert.IsTrue(newTodo);
+            //the h3 is selected, and checked to see if it contains sit-ups (which is the first exercise in the list...)
+            var exercise = browser.FindElement(By.CssSelector(".exercises-heading h3")).Text;
+            Assert.AreEqual("Sit-ups", exercise);
         }
 
         [TestMethod]
-        public void CheckItemCounter()
+        public void CheckThatItemGetsAdded()
         {
-            var searchInput = browser.FindElement(By.Id("new-todo"));
+            browser.FindElement(By.CssSelector(".exercises-heading button")).Click();
+
 
             searchInput.SendKeys("Test");
             searchInput.SendKeys(Keys.Enter);
