@@ -34,21 +34,10 @@ namespace TodoTester
         {
             browser.FindElement(By.CssSelector(".exercises-heading button")).Click();
 
+            browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
-            searchInput.SendKeys("Test");
-            searchInput.SendKeys(Keys.Enter);
-
-            var counter = browser.FindElement(By.CssSelector("#todo-count")).Text;
-
-            Assert.AreEqual("1 item left", counter);
-
-            var checkbox = browser.FindElement(By.CssSelector(".toggle-one"));
-
-            checkbox.Click();
-
-            counter = browser.FindElement(By.CssSelector(".todo-count")).Text;
-
-            Assert.AreEqual("0 items left", counter);
+            var exercise = browser.FindElement(By.CssSelector("#workout ul li h3")).Text;
+            Assert.AreEqual("Sit-ups", exercise);
         }
 
         [TestMethod]
