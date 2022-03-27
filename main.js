@@ -204,7 +204,14 @@ Vue.createApp({
 
       //if it's not a list
       else {
-        const item = this.exercises.find(item => item.id == itemID)
+        const item = this.exercises.find(item => item.id == itemID);
+
+        if (this.userWorkout.length > 0) {
+          let temp = { name: "Break", length: 15 };
+
+          this.userWorkout.push(temp);
+        }
+        
         this.userWorkout.push(item);
       }
     }//method
