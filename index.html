@@ -48,14 +48,12 @@
             </div>
 
             <div class="description-container">
-              <img v-bind:src="'images/' + exercise.image" v-bind:alt="exercise.image"
-              draggable="true"
-              class="drag-el"
-              @dragstart="startDragExercise($event, exercise)">
+              <img v-bind:src="'images/' + exercise.image" v-bind:alt="exercise.image" draggable="true" class="drag-el"
+                @dragstart="startDragExercise($event, exercise)">
               <div>
-              <p class="difficulty">Difficulty: {{ exercise.level }}</p>
-              <p class="description">{{ exercise.description }}</p>
-            </div>
+                <p class="difficulty">Difficulty: {{ exercise.level }}</p>
+                <p class="description">{{ exercise.description }}</p>
+              </div>
 
             </div>
 

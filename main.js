@@ -81,7 +81,7 @@ Vue.createApp({
 
       //calculates the stop time
       let timeToAdd = 0;
-      for(item of this.userWorkout){
+      for (item of this.userWorkout) {
         timeToAdd = timeToAdd + item.length;
       }
       let currentTime = new Date().getTime();
@@ -96,7 +96,7 @@ Vue.createApp({
       this.workoutTimeLeft = '';
     },//method
 
-    async loopThroughExercises(workout){
+    async loopThroughExercises(workout) {
       //loops through all exercises
       for (item of workout) {
         if (this.workoutActive) {
@@ -106,10 +106,10 @@ Vue.createApp({
           item.querySelector(".exerciseTimer").hidden = false;
 
           //calculate the time of the exercise
-          if(item.querySelector('h3').textContent.includes('Break')){
+          if (item.querySelector('h3').textContent.includes('Break')) {
             timeToAdd = 15000;
           }
-          else{
+          else {
             timeToAdd = 45000;
           }
 
@@ -131,11 +131,11 @@ Vue.createApp({
             await new Promise(resolve => setTimeout(resolve, 1000));
           }//while
 
-              //removes active and hides the timer
-              item.classList.remove("active");
-              item.querySelector(".exerciseTimer").hidden = true;
-            }//if
-          }//for
+          //removes active and hides the timer
+          item.classList.remove("active");
+          item.querySelector(".exerciseTimer").hidden = true;
+        }//if
+      }//for
     },
 
     //for the removeButton
@@ -164,7 +164,7 @@ Vue.createApp({
     },
 
     //sets the effect of dragging the exercise and saves its info
-    startDragExercise(evt, item){
+    startDragExercise(evt, item) {
       evt.dataTransfer.dropEffect = "move"
       evt.dataTransfer.effectAllowed = "move"
       evt.dataTransfer.setData('itemID', item.id)
@@ -173,7 +173,7 @@ Vue.createApp({
 
     //sets the effect of dragging the whole pre-made workout
     //and saves its infos
-    startDragProgram(evt, item){
+    startDragProgram(evt, item) {
       evt.dataTransfer.dropEffect = "move"
       evt.dataTransfer.effectAllowed = "move"
       evt.dataTransfer.setData('itemID', item.id)
@@ -185,7 +185,7 @@ Vue.createApp({
       const isList = evt.dataTransfer.getData('isList')
 
       //if the data transfer says it's a list
-      if(isList === "true") {
+      if (isList === "true") {
         this.userWorkout = [];
 
         const list = this.readymades.find(list => list.id == itemID);
@@ -211,7 +211,7 @@ Vue.createApp({
 
           this.userWorkout.push(temp);
         }
-        
+
         this.userWorkout.push(item);
       }
     }//method
