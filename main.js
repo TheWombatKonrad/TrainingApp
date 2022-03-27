@@ -172,7 +172,7 @@ Vue.createApp({
     },
 
     //sets the effect of dragging the whole pre-made workout
-    //and saves its info
+    //and saves its infos
     startDragProgram(evt, item){
       evt.dataTransfer.dropEffect = "move"
       evt.dataTransfer.effectAllowed = "move"
