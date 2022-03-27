@@ -41,7 +41,7 @@
         <ul id="exercises">
           <li v-for="exercise in exercises">
             <div class="exercises-heading">
-              <h3 draggable="true" class="drag-el" @dragstart="startDragWorkout($event, exercise)">
+              <h3 draggable="true" class="drag-el" @dragstart="startDragExercise($event, exercise)">
                 {{ exercise.name }}
               </h3>
               <button type="button" @click="addExToUserWorkout(exercise)">Add</button>
