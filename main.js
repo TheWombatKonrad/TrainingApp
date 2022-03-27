@@ -88,6 +88,16 @@ Vue.createApp({
       this.workoutStopTime = currentTime + timeToAdd * 1000;
 
       //loops through all exercises
+      await this.loopThroughExercises(workout);
+
+      //resets the appearance
+      document.getElementById('start').hidden = false;
+      document.getElementById('next').hidden = true;
+      this.workoutTimeLeft = '';
+    },//method
+
+    async loopThroughExercises(workout){
+      //loops through all exercises
       for (item of workout) {
         if (this.workoutActive) {
 
@@ -104,7 +114,7 @@ Vue.createApp({
           }
 
           //calculates how many seconds of the exercise are left
-          currentTime = new Date().getTime();
+          let currentTime = new Date().getTime();
           let exerciseStopTime = currentTime + timeToAdd;
           this.exerciseTimeLeft = exerciseStopTime - currentTime;
 
@@ -126,12 +136,7 @@ Vue.createApp({
               item.querySelector(".exerciseTimer").hidden = true;
             }//if
           }//for
-
-      //resets the appearance
-      document.getElementById('start').hidden = false;
-      document.getElementById('next').hidden = true;
-      this.workoutTimeLeft = '';
-    },//method
+    },
 
     //for the removeButton
     //first the time left of the exercise is removed from the

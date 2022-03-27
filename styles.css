@@ -104,6 +104,10 @@ h1 {
 	font: inherit;
 }
 
+#control-bar button:hover {
+	background: #EFEFEF;
+}
+
 #overall-time {
 	box-sizing: content-box;
 	width: calc(100% - 4px);
